@@ -1,0 +1,12 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+    <div class='panel-body'>
+        <div *ngIf="holidays && holidays.length">            
+            <ul *ngFor= "let holiday of holidays">
+                <li><a [routerLink]="['/holidays', holiday.description]">{{holiday.date}}</a></li>                       
+            </ul>            
+        </div>
+    </div>
+</div>
